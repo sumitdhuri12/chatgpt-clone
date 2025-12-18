@@ -15,6 +15,7 @@ export default async function handler(req, res) {
       result: response.output_text,
     });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ error: "AI request failed" });
   }
 }
